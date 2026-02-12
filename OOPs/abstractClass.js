@@ -42,6 +42,14 @@ class Vehicle {
         this.make = make;
         this.model = model;
     }
+    //Non-abstract method
+    getDetails() {
+        return `Make: ${this.make}, Model: ${this.model}`;
+    }
+    //Static method
+    static getVehicleType() {
+        return "This is a vehicle.";
+    }
 }
 class Car extends Vehicle {
     color;
@@ -52,4 +60,6 @@ class Car extends Vehicle {
 }
 const car = new Car("Toyota", "Corolla", "Red");
 console.log(`Car Make: ${car.make}, Model: ${car.model}, Color: ${car.color}`);
+console.log(car.getDetails());
+console.log(Vehicle.getVehicleType());
 //# sourceMappingURL=abstractClass.js.map

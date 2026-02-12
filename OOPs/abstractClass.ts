@@ -46,6 +46,14 @@ console.log(`Area of Circle: ${circle.getArea()}`);
 //Constructors in Abstract Class
 abstract class Vehicle {
     constructor(public make: string, public model: string) {}
+    //Non-abstract method
+    getDetails(): string {
+        return `Make: ${this.make}, Model: ${this.model}`;
+    }
+    //Static method
+    static getVehicleType(): string {
+        return "This is a vehicle.";
+    }
 }
 
 class Car extends Vehicle {
@@ -56,3 +64,5 @@ class Car extends Vehicle {
 
 const car = new Car("Toyota", "Corolla", "Red");
 console.log(`Car Make: ${car.make}, Model: ${car.model}, Color: ${car.color}`);
+console.log(car.getDetails());
+console.log(Vehicle.getVehicleType());

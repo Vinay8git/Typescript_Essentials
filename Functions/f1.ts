@@ -19,7 +19,9 @@ const multiply = (a: number, b: number): number => {
 function greet(name: string, greeting?: string): string {
     if (greeting) {
         return `${greeting}, ${name}!`;
-    } else {        return `Hello, ${name}!`;
+    } 
+    else {        
+        return `Hello, ${name}!`;
     }
 }
 
@@ -66,8 +68,11 @@ function throwError(message: string): never {
 function formatValue(value: string | number): string {
     if (typeof value === 'string') {
         return `String: ${value}`;
-    } else {        return `Number: ${value}`;
-    }}
+    } 
+    else {        
+        return `Number: ${value}`;
+    }
+}
 
 //13. Function with Intersection Types
 interface A {
